@@ -1,0 +1,12 @@
+name: 'Anguler Rest Quick start'
+description: 'This module is only to set up required settings and ensure you have modules required.'
+type: module
+core: 8.x
+dependencies:
+  - node
+  - rest
+  - serialization
+  - user
+  - jsonapi
+  - restui
+version: 8.x-1.0
