@@ -171,6 +171,10 @@ app.controller('LoginCtrl', function ($scope, $http, $rootScope, $httpParamSeria
         SessionService.set('userName', data.data.current_user.name);
         $rootScope.XCSRFToken = data.data.csrf_token;
         $http.defaults.headers.csrf_token = data.data.csrf_token;
+        $http.defaults.headers.post['X-CSRF-Token'] = data.data.csrf_token;
+        $http.defaults.headers.patch['X-CSRF-Token'] = data.data.csrf_token;
+        $http.defaults.headers['X-CSRF-Token'] = data.data.csrf_token;
+
         // kick them to some where else.
         $location.path('/protected');
       }, function (error) {
