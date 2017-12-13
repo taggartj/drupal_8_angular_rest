@@ -41,7 +41,7 @@ app.config(function($routeProvider) {
 
 app.run(function ($rootScope, $http, $location, SessionService) {
   // $rootScope.baceUrl = 'http://where-youput-drupal.com/' // need the traling /
-  $rootScope.baceUrl = 'http://drupal-8-4-3.dd:8099/';
+  $rootScope.baceUrl = 'http://yoursite.com/';
   $rootScope.XCSRFToken = null;
   $rootScope.userData = {};
   var tokenPoint = $rootScope.baceUrl + 'session/token?_format=json';
