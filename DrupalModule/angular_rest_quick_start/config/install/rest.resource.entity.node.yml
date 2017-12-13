@@ -17,3 +17,9 @@ configuration:
     - json
   authentication:
     - cookie
+dependencies:
+  module:
+    - angular_rest_quick_start
+  enforced:
+    module:
+      - angular_rest_quick_start

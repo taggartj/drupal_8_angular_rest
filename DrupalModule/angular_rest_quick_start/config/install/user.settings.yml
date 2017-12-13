@@ -14,3 +14,9 @@ cancel_method: user_cancel_block
 password_reset_timeout: 86400
 password_strength: true
 langcode: en
+dependencies:
+  module:
+    - angular_rest_quick_start
+  enforced:
+    module:
+      - angular_rest_quick_start

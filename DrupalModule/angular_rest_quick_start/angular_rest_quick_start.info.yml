@@ -1,4 +1,4 @@
-name: 'Anguler Rest Quick start'
+name: 'Angular Rest Quick start'
 description: 'This module is only to set up required settings and ensure you have modules required.'
 type: module
 core: 8.x
@@ -9,4 +9,5 @@ dependencies:
   - user
   - jsonapi
   - restui
+  - angular_clean
 version: 8.x-1.0

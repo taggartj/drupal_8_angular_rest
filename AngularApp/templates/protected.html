@@ -1,0 +1,27 @@
+<div ng-controller="ProtectedCtrl">
+  <h2>{{drupalUserName}}'s account.</h2> <a href="#!/" class="btn btn-link">home</a> | <a href="#!/create/article" class="btn btn-link">create article</a>
+
+  <p> Show a https://www.drupal.org/project/jsonapi article list.</p>
+
+   Search:<input ng-model="query" type="text"/>
+   <br/>
+
+  <table class="table table-hover table-striped">
+    <tr>
+        <th><a href="" ng-click="sortField ='node.attributes.nid'; reverse = !reverse">Node Id</a></th>
+        <!-- <th>UUID</th> -->
+        <th><a href="" ng-click="sortField = 'node.attributes.title'; reverse = !reverse">Title</a></th>
+        <th><a href="" ng-click="sortField = 'node.attributes.changed'; reverse = !reverse">Date Changed</a></th>
+        <th>Link</th>
+    </tr>
+    <tr ng-repeat="node in articles | filter:query | orderBy:sortField:reverse">
+        <td>{{node.attributes.nid}}</td>
+        <!-- <td>{{node.id}}</td> -->
+        <td>{{node.attributes.title}}</td>
+        <!-- <td>{{node.links.self}}</td> -->
+        <td>{{node.attributes.changed | date:'medium'}}</td>
+        <td><a href="#!/article/{{node.id}}">View</a></td>
+    </tr>
+  </table>
+
+</div>
